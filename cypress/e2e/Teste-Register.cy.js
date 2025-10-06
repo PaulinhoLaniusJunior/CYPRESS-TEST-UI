@@ -15,4 +15,9 @@ describe('Funcionalidade: Register', () => {
 
         cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('exist')
     });
+
+    it('Deve fazer o cadastro com sucesso', () => {
+        cy.register(faker.internet.email(), '123456', faker.person.firstName(), faker.person.lastName())
+        cy.get('.woocommerce-message').should('contain', 'Detalhes da conta modificados com sucesso.')
+    });
 });
