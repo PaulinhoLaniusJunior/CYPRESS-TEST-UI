@@ -5,7 +5,7 @@ const { faker } = require("@faker-js/faker");
 describe('Funcionalidade: Register', () => {
 
     beforeEach(() => {
-        cy.visit('http://lojaebac.ebaconline.art.br/minha-conta/')
+        cy.visit('minha-conta')
     });
 
     it('Deve fazer o cadastro com sucesso', () => {
